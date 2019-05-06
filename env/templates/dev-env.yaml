@@ -1,0 +1,26 @@
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  creationTimestamp: null
+  name: dev
+spec:
+  previewGitInfo:
+    user: {}
+  source:
+    ref: master
+    url: https://github.com/orgtesttags/environment-tgs1-dev.git
+  teamSettings:
+    buildPackRef: master
+    buildPackUrl: https://github.com/jenkins-x-buildpacks/jenkins-x-kubernetes.git
+    envOrganisation: orgtesttags
+    gitServer: https://github.com
+    helmTemplate: true
+    importMode: YAML
+    kubeProvider: gke
+    pipelineUsername: rajattyagius
+    promotionEngine: Prow
+    prowEngine: Tekton
+    useGitOps: true
+    versionStreamUrl: https://github.com/jenkins-x/jenkins-x-versions.git
+  webHookEngine: Prow
+status: {}
